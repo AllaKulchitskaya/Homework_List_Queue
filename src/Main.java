@@ -52,10 +52,17 @@ public class Main {
         volvo.addMechanic(michail, fedor);
         volvo.addSponsor(sponsor2, sponsor3);
 
-
         List<Transport> transports = List.of(kia, corvette,
                 valdai, dongFeng,
                 hyundai, volvo);
+
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.addCar(kia);
+        serviceStation.addCar(corvette);
+        serviceStation.addTruck(valdai);
+        serviceStation.addTruck(dongFeng);
+        serviceStation.serviceTransport();
+
 
         for (Transport transport : transports) {
             printRaceInformation(transport);
